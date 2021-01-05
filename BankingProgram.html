@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Расчет простых процентов по вкладу на 5 лет");
+	var years = ["год", "два года", "три года", "четыре года", "пять лет"];
+	for (;;) {
+		var deposit = +prompt("Введите сумму вклада");
+		var percent = +prompt("Введите годовой процент");
+		if (deposit < 0 || percent < 0 || isNaN(deposit) || isNaN(percent)) {
+			alert("Введите положительные числа!");
+		} else {
+			for(var i = 0; i <5; i++){
+				deposit += deposit * percent / 100;
+				document.write("Через " + years[i] + " у вас на вкладе будет " + deposit.toFixed(2) + "<br>");
+			}	break;
+		}
+	}
+</script>
