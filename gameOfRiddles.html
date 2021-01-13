@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	alert("4 загадки про бытовые приборы.");
+
+	var score = 0;
+	var answer = prompt("Он охотно пыль вдыхал,\nНе болел и не чихал.");
+		answer = answer.toLowerCase();
+		if (answer == "пылесос") {
+			score++
+			alert("Ответ верный!");
+		} else alert("Ответ неверный, правильный ответ: пылесос\nПопробуйте отгдадать ещё 3 загадки:");
+
+		if (score == 0) {
+			answer = prompt("Кормит дом\nШкаф со льдом.");
+			answer = answer.toLowerCase();
+			if (answer == "холодильник" || answer == "морозильник") {
+				score++;
+				alert("Ответ верный!");
+			} else alert("Ответ неверный, правильный ответ: холодильник");
+
+			answer = prompt("Глядя на экран в квартире,\nВидим, что творится в мире.");
+			answer = answer.toLowerCase();
+			if (answer == "телевизор" || answer == "монитор") {
+				score++;
+				alert("Ответ верный!");
+			} else alert("Ответ неверный, правильный ответ: телевизор");
+
+			answer = prompt("Гладит всё, чего касается,\nА дотронешься - кусается.");
+			answer = answer.toLowerCase();
+			if (answer == "утюг" || answer == "утюжок") {
+				score++;
+				alert("Ответ верный!");
+			} else alert("Ответ неверный, правильный ответ: утюг");
+			alert("Ваш итоговый счёт: " + score + " очка");
+		} else alert("Игра окончена!");
+
+
+
+
+
+</script>
