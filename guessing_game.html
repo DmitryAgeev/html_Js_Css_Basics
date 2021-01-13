@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	var answer = parseInt(Math.random() * 100);
+	var userAnswer = +prompt("Guess the number 0-100")
+	var maxTryCount = 2;
+
+	for (var tryCount = 1; tryCount < maxTryCount; tryCount++) {
+		if(userAnswer == answer){
+			alert("Congratulations! ");
+			break;
+		} else if (userAnswer > answer){
+			alert("Yor write to big number. ");
+		} else if (userAnswer < answer){
+			alert("Yor write to small number. ");
+		}
+		
+		userAnswer = +prompt("Try more. Write the number 0-100\n You have " + (maxTryCount - tryCount) + " more attempts");
+	}
+
+	if(tryCount == maxTryCount)
+		alert("You loose!");
+	alert("The corret number: " + answer);
+
+
+</script>
